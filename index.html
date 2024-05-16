@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Slate : A responsive theme for GitHub Pages</title>
+    <title>Some notes that you may find useful</title>
   </head>
 
   <body>
@@ -36,7 +36,10 @@
 
         <h1></h1>
 
-        <p>curl -s  https://theunitedstates.io/congress-legislators/legislators-current.json|jq -c '.[]|.bio|{ "year":.birthday[0:4], "gender": .gender}'
+        Let's look at some open data sources to find out some interesting facts.
+        <p>
+          <pre>
+          curl -s  https://theunitedstates.io/congress-legislators/legislators-current.json|jq -c '.[]|.bio|{ "year":.birthday[0:4], "gender": .gender}'
 
 {"year":"1952","gender":"M"}
 {"year":"1958","gender":"F"}
@@ -48,7 +51,7 @@
 {"year":"1941","gender":"M"}
 {"year":"1950","gender":"F"}
 {"year":"1956","gender":"M"}
-          ...
+          ...</pre>
           </p>
 
         <p>Roses are <em>emphasized</em></br>
