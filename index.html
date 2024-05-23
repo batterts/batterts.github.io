@@ -80,6 +80,12 @@ Let's sort the list using jq and then we'll print it out in table format.  <a hr
   1944  Matsui, Doris                CA       F
           ...
         </pre>
+
+Here's a histogram of birth years:
+        <pre>
+        curl -s https://theunitedstates.io/congress-legislators/legislators-current.json|jq -c 'group_by(.bio.birthday[0:4]) | map({year: .[0].bio.birthday[0:4], count: (length), gender:.[0].bio.gender })' |jp -x ..year -y ..count  -canvas full -type bar
+        </pre>
+<img src="https://gist.github.com/assets/4614226/a452c3ff-2f3e-4f8d-b6cd-8a38aeebb73b"/>
         
         
 
